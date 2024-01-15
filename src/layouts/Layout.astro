@@ -18,8 +18,63 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
+	:root {
+		--blue: #3A1FD3;
+		--darkBlue: #10284B;
+		--gray: #CBCBCD;
+		--lightGray: #EDEDE0;
+		--lightYellow: #F1CB6A;
+		--white: #fff;
+		--sky: #95D0C6;
+		--pink: #F66C68;
+		--purple: #9B90E2;
+	}
+
+	@font-face {
+		font-family: 'ArminGrotesk';
+		src: url('/public/fonts/armingrotesk-normal.otf') format('otf');
+		font-weight: 600;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'ArminGroteskBold';
+		src: url('/public/fonts/armingrotesk-ultrabold.otf') format('otf');
+		font-weight: 800;
+		font-style: normal;
+	}
+
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+		box-sizing: border-box;
+	}
+
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: 'ArminGrotesk,ArminGroteskBold', sans-serif;
+		font-weight: 600;
+	}
+
+	blockquote, figure, h1, h2, h3, h4, h5, h6, hr, p{
+		margin: 0;
+	}
+
+	img{
+		max-width: 100%;
+		display: block;
+	}
+
+	ul{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	a{
+		text-decoration: none;
 	}
 </style>
