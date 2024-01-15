@@ -1,0 +1,136 @@
+<div class="heroImage">
+  <img
+    src="/assets/homepage__052023.webp"
+    alt="Stylized illustration showing Stark customers floating around the Contrast Checker tool"
+    class="heroImage_image"
+  />
+
+  <img
+    src="/assets/homepage__sparkle.webp"
+    alt="Spark to the rounded corners"
+    class="heroImage_sparkle"
+  />
+
+  <img
+    src="/assets/homepage__avatar-circle.png"
+    alt="Circle"
+    class="heroImage_circleTop"
+  />
+
+  <img
+    src="/assets/homepage__avatar-circle.png"
+    alt="Circle"
+    class="heroImage_circleBottom"
+  />
+
+  <img
+    src="/assets/homepage__alttext-bubble.png"
+    alt="Alt text bubble"
+    class="heroImage_altTextBubble"
+  />
+
+  <img
+    src="/assets/homepage__contrast-bubble.png"
+    alt="Contrast bubble"
+    class="heroImage_contrastBubble"
+  />
+
+  <img
+    src="/assets/homepage__focusorder-bubble.png"
+    alt="Focus order bubble"
+    class="heroImage_focusOrderBubble"
+  />
+</div>
+
+<style>
+	.heroImage{
+		position: relative;
+		display: none;
+	}
+
+	.heroImage .heroImage_image{
+		width: 691px;
+		max-width: 691px;
+	}
+
+	.heroImage .heroImage_circleTop,
+	.heroImage .heroImage_circleBottom,
+	.heroImage .heroImage_sparkle,
+	.heroImage .heroImage_altTextBubble,
+	.heroImage .heroImage_contrastBubble,
+	.heroImage .heroImage_focusOrderBubble{
+		position: absolute;
+	}
+
+	.heroImage .heroImage_sparkle{
+		top: 0;
+		left: 10px;
+		width: 40px;
+	}
+
+	.heroImage .heroImage_circleTop{
+		top: 114px;
+		right: 14px;
+		width: 180px;
+		animation: rotateCircle 10s linear 0s infinite normal none;
+	}
+
+	.heroImage .heroImage_circleBottom{
+		bottom: 80px;
+		left: 100px;
+		width: 140px;
+		animation: rotateCircle 10s linear 0s infinite reverse none;
+	}
+
+	.heroImage .heroImage_altTextBubble{
+		bottom: 170px;
+		left: 80px;
+		width: 65px;
+		opacity: 0;
+		animation: opacityBubbles .5s linear 4s forwards;
+	}
+
+	.heroImage .heroImage_focusOrderBubble{
+		bottom: 175px;
+		right: 12px;
+		width: 65px;
+		opacity: 0;
+		animation: opacityBubbles .5s linear 3s forwards;
+	}
+
+	.heroImage .heroImage_contrastBubble{
+		top: 70px;
+		right: 80px;
+		width: 65px;
+		opacity: 0;
+		animation: opacityBubbles .5s linear 5s forwards;
+	}
+
+	/* ANIMATIONS */
+	@keyframes rotateCircle {
+		from{
+			transform: rotate(0deg);
+		}
+
+		to{
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes opacityBubbles {
+		from{
+			opacity: 0;
+		}
+
+		to{
+			opacity: 1;
+		}
+	}
+
+	/* DESKTOP */
+	@media screen and (min-width: 900px) {
+		.heroImage{
+			display: inline-flex;
+    }
+	}
+</style>

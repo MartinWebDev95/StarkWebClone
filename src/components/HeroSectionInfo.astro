@@ -1,0 +1,115 @@
+<div class="heroInfo">
+  <h1>Introducing the all-new Stark suite</h1>
+
+  <h2>Supercharge Accessibility</h2>
+  
+  <p>
+    Tired of manually checking spreadsheets, messy handovers, and
+    expensive retrofitting? Stark connects the tools you and your
+    team already use in a streamlined end-to-end accessibility workflow
+    you actually love.
+  </p>
+
+  <div class="heroInfo_btnContainer">
+    <button type="button" class="primaryButton">
+      Create a free account
+    </button>
+
+    <button type="button" class="secondaryButton">
+      Contact Sales
+    </button>
+
+    <img src="/assets/homepage__header-yellow-arrow.svg" alt="Arrow" />
+  </div>
+</div>
+
+<style>
+	.heroInfo{
+		color: var(--white);
+		margin-block: 6rem;
+		width: fit-content;
+	}
+
+	.heroInfo h1{
+		color: var(--lightYellow);
+		text-transform: uppercase;
+		font-size: .9em;
+		letter-spacing: .2em;
+	}
+
+	.heroInfo h2{
+		font-size: clamp(3em, 10vw, 5em);
+		font-weight: 800;
+		margin-block: 1rem;
+		line-height: 1.2em;
+		word-wrap: break-word;
+		text-align: left;
+	}
+
+	.heroInfo p{
+		line-height: 1.6em;
+		font-weight: 400;
+		font-size: clamp(1.1em, 3vw, 1.2em);
+	}
+
+	.heroInfo .heroInfo_btnContainer{
+		margin-top: 2rem;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+		position: relative;
+	}
+
+	.heroInfo_btnContainer .primaryButton,.heroInfo_btnContainer .secondaryButton{
+		border: 2px solid var(--lightYellow);
+		padding: .8rem 1.5rem;
+		border-radius: 10px;
+		font-weight: 600;
+		font-size: 1em;
+		cursor: pointer;
+		width: 100%;
+		transition: all .2s ease-in-out;
+	}
+
+	.heroInfo_btnContainer .primaryButton{
+		background-color: var(--lightYellow);
+		color: var(--darkBlue);
+	}
+
+	.heroInfo_btnContainer .primaryButton:hover{
+		background-color: var(--lightYellow);
+		opacity: .9;
+	}
+
+	.heroInfo_btnContainer .secondaryButton{
+		background-color: transparent;
+		color: var(--lightYellow);
+	}
+
+	.heroInfo_btnContainer .secondaryButton:hover{
+		background-color: var(--lightYellow);
+		color: var(--darkBlue);
+	}
+
+	.heroInfo_btnContainer img{
+		display: none;
+	}
+
+	/* DESKTOP */
+	@media screen and (min-width: 900px) {
+		.heroInfo_btnContainer img{
+			position: absolute;
+			display: block;
+			width: 150px;
+			right: -20px;
+			top: 0px;
+		}
+	}
+
+	@media screen and (min-width: 448px) {
+		.heroInfo_btnContainer .primaryButton,.heroInfo_btnContainer .secondaryButton{
+			width: fit-content;
+		}
+	}
+</style>
