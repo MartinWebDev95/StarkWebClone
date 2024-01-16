@@ -1,0 +1,37 @@
+---
+import getSocialList from '../lib/getSocialList'
+---
+
+<ul class="socialList">
+  {getSocialList.map((social) => (
+    <li class="socialItem">
+      <a href="#">
+        <img src={social.image} alt={social.name} />
+      </a>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .socialList{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .socialList .socialItem{
+    transform: scale(1);
+    transition: transform .2s ease-in-out;
+  }
+
+  .socialList .socialItem a img{
+    width: 30px;
+  }
+
+  @media screen and (min-width: 760px) {
+    .socialList .socialItem:hover{
+      transform: scale(1.2);
+      transition: transform .2s ease-in-out;
+    }
+  }
+</style>

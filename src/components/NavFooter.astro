@@ -1,0 +1,64 @@
+---
+import getFooterNavLinks from '../lib/getFooterNavLinks'
+---
+
+<ul class="footerList">
+  {getFooterNavLinks.map((item) => (
+    <li class="listItem">
+      {item.menu}
+
+      <ul class="footerSubmenus">
+        {item.submenu.map((subItem) => (
+          <li class="submenuItem">
+            <a href="#">{subItem.submenuItem}</a>
+          </li>
+        ))}
+      </ul>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .footerList{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 2rem;
+    margin-block: 4rem;
+  }
+
+  .footerList .listItem{
+    color: var(--white);
+    text-transform: uppercase;
+  }
+
+  .listItem .footerSubmenus{
+    margin-top: 1rem;
+  }
+
+  .footerSubmenus .submenuItem{
+    padding-bottom: 1rem;
+  }
+
+  .footerSubmenus .submenuItem a{
+    color: var(--white);
+    text-transform: none;
+    display: block;
+    font-size: .9em;
+  }
+
+  @media screen and (min-width: 600px) {
+    .footerList{
+      grid-template-columns: repeat(3, auto);
+    }
+  }
+
+  @media screen and (min-width: 760px) {
+    .footerList{
+      grid-template-columns: repeat(4, auto);
+    }
+    
+    .footerSubmenus .submenuItem a:hover{
+      text-decoration: underline;
+    }
+  }
+</style>
