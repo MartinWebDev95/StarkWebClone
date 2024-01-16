@@ -1,0 +1,32 @@
+---
+import getCompaniesLogos from '../lib/getCompaniesLogos';
+---
+
+<section class="section">
+  <div class="containerLogos">
+    {getCompaniesLogos().map((item) => (
+      <img src={item.logo} alt={item.companyName}/>
+    ))}
+  </div>
+</section>
+
+<style>
+  .section{
+    overflow: hidden;
+    padding-bottom: 8rem;
+  }
+
+  .section .containerLogos{
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 10rem;
+    animation: marquee 200s linear infinite;
+  }
+
+  @keyframes marquee {
+    100%{
+      transform: translateX(-6511px);
+    }
+  }
+</style>
