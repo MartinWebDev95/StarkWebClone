@@ -1,0 +1,62 @@
+---
+import getStarkSuite from '../lib/getStarkSuite'
+import SuiteItem from './SuiteItem.astro'
+---
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Meet the Suite</h1>
+
+    <ul class="suiteList">
+      {getStarkSuite.map((suite) => (
+        <SuiteItem suite={suite}/>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .section{
+    display: flex;
+    justify-content: center;
+    padding-inline: 1rem;
+  }
+
+  .section .container{
+    max-width: 1160px;
+    width: 1160px;
+    background-color: var(--lightGray);
+    padding: 2rem;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .title{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--darkBlue);
+    font-size: clamp(2.2em, 5vw, 3em);
+    font-weight: 800;
+  }
+
+  .container .suiteList{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  @media screen and (min-width: 770px) {
+    .container .suiteList{
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .container .suiteList{
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+</style>
