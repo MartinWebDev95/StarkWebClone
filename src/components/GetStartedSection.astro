@@ -1,0 +1,91 @@
+---
+import getStartedSteps from '../lib/getStartedSteps';
+import Step from './Step.astro';
+---
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">
+      <span>
+        So, you’re ready to get started and
+
+        <svg width="710" height="59" viewBox="0 0 710 59" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-20">
+          <path d="M0.5 58.8569L10.8925 6.40476L709.5 0.856934L692.179 58.8569H0.5Z" fill="#99D6CC" />
+        </svg>
+      </span>
+
+      <span>
+        supercharge accessibility?
+      </span>
+    </h1>
+
+    <ul class="list">
+      {getStartedSteps.map((item) => <Step item={item}/>)}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .section{
+    display: flex;
+    justify-content: center;
+    padding-inline: 1rem;
+    margin-top: 8rem;
+  }
+
+  .section .container{
+    max-width: 1160px;
+    width: 1160px;
+    overflow: hidden;
+  }
+
+  .container .title{
+    font-size: clamp(2em, 10vw, 2.5em);
+    font-weight: 800;
+    color: var(--darkBlue);
+    text-align: center;
+    line-height: 1.1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .title span:first-of-type{
+    position: relative;
+  }
+
+  .title span:first-of-type svg{
+    display: none;
+  }
+
+  .container .list{
+    margin-top: 4rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: transparent;
+    overflow-x: scroll;
+    padding-bottom: 2rem;
+  }
+
+  @media screen and (min-width: 990px){
+    .container .list{
+      background-color: var(--lightGray);
+      border-radius: 50px;
+      justify-content: space-between;
+      padding: 4rem;
+      gap: 4rem;
+      overflow-x: inherit;
+    }
+
+    .title span:first-of-type svg{
+      display: block;
+      position: absolute;
+      right: -20px;
+      top: -8px;
+      z-index: -1;
+    }
+  }
+</style>

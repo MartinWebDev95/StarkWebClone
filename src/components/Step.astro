@@ -1,0 +1,57 @@
+---
+import Button from "./Button.astro";
+
+const { item } = Astro.props
+
+---
+
+<li class="listItem">
+  <h2>{item.subtitle}</h2>
+  <h3>{item.title}</h3>
+
+  <p>{item.description}</p>
+
+  <Button>
+    {item.btnText}
+  </Button>
+</li>
+
+<style>
+  .listItem{
+    background-color: var(--lightGray);
+    padding: 2rem;
+    border-radius: 50px;
+    min-width: 350px;
+  }
+
+  .listItem h2{
+    text-transform: uppercase;
+    color: var(--blue);
+    font-size: 1em;
+    letter-spacing: .1em;
+    margin-bottom: 1rem;
+  }
+
+  .listItem h3{
+    color: var(--darkBlue);
+    font-size: clamp(1.5em, 10vw, 2em);
+    font-weight: 800;
+    line-height: 1.1em;
+    margin-bottom: 1rem;
+  }
+
+  .listItem p{
+    color: var(--darkBlue);
+    font-size: 1em;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    line-height: 1.8em;
+  }
+
+  @media screen and (min-width: 990px){
+    .listItem{    
+      padding: 0;
+      min-width: auto;
+    }
+  }
+</style>
