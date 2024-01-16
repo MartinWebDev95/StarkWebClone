@@ -1,0 +1,25 @@
+<button type="button" class="button">
+  <slot/>
+</button>
+
+<style>
+  .button{
+    background-color: var(--blue);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    width: fit-content;
+    padding: 1rem 2rem;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 2rem;
+  }
+
+  @media screen and (min-width: 770px) {
+    .button:hover{
+      opacity: .9;
+      transition: all .2s ease-in-out;
+    }
+  }
+</style>
