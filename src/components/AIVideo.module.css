@@ -1,0 +1,32 @@
+.thumbnail{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.playIcon{
+  position: absolute;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  width: fit-content;
+  height: fit-content; 
+}
+
+.thumbnail:hover, 
+.playIcon:hover{
+  cursor: pointer;  
+}
+
+.thumbnail[aria-hidden='false'], 
+.playIcon[aria-hidden='false']{
+  display: none;
+}
+
+iframe{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: none;
+}
