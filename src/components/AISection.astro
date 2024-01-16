@@ -1,0 +1,141 @@
+---
+import AIVideo from './AIVideo.jsx'
+---
+
+<section class="aiSection">
+  <div class="container">
+    <h1 class="title">
+      <span>
+        Introducing Sidekick
+
+        <svg width="568" height="57" viewBox="0 0 568 57" fill="none" xmlns="http://www.w3.org/2000/svg" class="titleBg">
+          <path d="M0 57L8.32573 5.45217L568 0L554.124 57H0Z" fill="var(--lightYellow)" />
+        </svg>
+      </span>
+
+      <span>
+        Your new AI-powered accessibility
+        assistant in Stark
+      </span>
+    </h1>
+
+    <p class="description">
+      Designing with accessibility in mind just got ten times faster. Automatically
+      scan your Figma or Sketch files and, in only seconds, you’ll get suggestions
+      for how to fix the accessibility issues in your design - no prior knowledge
+      needed!
+    </p>
+
+    <div class="containerVideo">
+      <svg width="445" height="410" viewBox="0 0 445 410" fill="none" xmlns="http://www.w3.org/2000/svg" class="shapeCyan">
+        <path d="M46.9349 338.378C30.2143 326.986 16.5724 311.079 8.59625 292.456C-9.37038 250.476 0.868112 195.19 41.948 172.708C83.7292 149.84 135.828 142.321 169.402 106.081C195.152 78.2885 205.456 36.7387 236.895 15.6064C288.079 -18.8073 361.823 12.7332 400.593 51.8842C416.52 67.9692 428.512 88.7202 430.826 111.237C433.14 133.755 425.959 156.059 422.906 178.508C416.222 227.494 441.621 264.257 444.198 310.598C448.552 388.984 362.659 423.241 298.44 404.999C244.722 389.738 198.834 356.367 141.166 355.961C128.054 355.865 114.92 357.677 101.83 357.128C82.1513 356.057 63.1553 349.568 46.9349 338.378V338.378Z" fill="#99D6CC" />
+      </svg>
+
+      <svg width="540" height="617" viewBox="0 0 540 617" fill="none" xmlns="http://www.w3.org/2000/svg" class="shapeYellow">
+        <path d="M445.56 149.191C453.145 160.728 460.257 172.267 466.883 183.53C535.913 301.021 588.678 463.395 466.33 567.45C413.653 612.261 305.493 648.752 262.078 572.438C227.389 511.456 276.773 439.467 238.154 379.566C189.892 304.746 68.3036 308.579 19.2668 234.287C-10.6299 189.067 -2.17208 125.338 30.7347 82.2435C80.6644 16.8525 178.135 -9.74503 256.666 4.20797C343.899 19.8029 399.074 78.4789 445.56 149.191Z" fill="#FEDB63" />
+      </svg>
+
+      <div class="video">
+        <AIVideo client:visible />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .aiSection{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    padding-inline: 1rem;
+    overflow: hidden;
+    padding-bottom: 8rem;
+  }
+
+  .aiSection .container{
+    max-width: 1160px;
+    width: 1160px;
+  }
+
+  .aiSection .title{
+    font-size: clamp(2.5em, 10vw, 3em);
+    font-weight: 800;
+    color: var(--darkBlue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title span{
+    line-height: 1.2em;
+    text-align: center;
+  }
+
+  .title span:first-of-type{
+    position: relative;
+  }
+
+  .title span:first-of-type svg{
+    display: none;
+  }
+
+  .aiSection .description{
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    line-height: 1.6em;
+    font-weight: 400;
+    font-size: clamp(1.1em, 3vw, 1.2em);
+    text-align: center;
+    color: var(--darkBlue);
+  }
+
+  .containerVideo{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+  }
+
+  .containerVideo .shapeCyan, 
+  .containerVideo .shapeYellow{
+    display: none;
+  }
+
+  .containerVideo .shapeCyan{
+    right: -150px;
+    top: -180px;
+  }
+
+  .containerVideo .shapeYellow{
+    left: -150px;
+    top: 80px;
+  }
+
+  .containerVideo .video{
+    margin-top: 2rem;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 760px) {
+    .title span:first-of-type svg{
+      position: absolute;
+      top: 0;
+      left: -8px;
+      z-index: -1; 
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .containerVideo .shapeCyan, 
+    .containerVideo .shapeYellow{
+      position: absolute;
+      display: block;
+      z-index: -1;
+    }
+  }
+</style>
