@@ -1,0 +1,85 @@
+---
+import ListOfTestimonials from './ListOfTestimonials'
+---
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">
+      <span>Loved by the community,</span>
+
+      <span>
+        trusted by 25,000+ companies
+
+        <svg width="766" height="58" viewBox="0 0 766 58" fill="none" xmlns="http://www.w3.org/2000/svg" class="mt-16"><path d="M0.5 58L4.06515 5.54783L765.5 0L762.225 58H0.5Z" fill="#FEDB63" /></svg>
+      </span>
+    </h1>
+
+    <div class="testimonial">
+      <ListOfTestimonials client:visible />
+    </div>
+  </div>
+</section>
+
+<style>
+  .section{
+    display: flex;
+    justify-content: center;
+    padding-inline: 1rem;
+    margin-top: 8rem;
+  }
+
+  .section .container{
+    max-width: 1160px;
+    width: 1160px;
+  }
+
+  .container .title{
+    font-size: clamp(2.5em, 10vw, 3em);
+    font-weight: 800;
+    color: var(--darkBlue);
+    text-align: center;
+    line-height: 1.1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title span:last-of-type svg{
+    display: none;
+  }
+
+  .section .testimonial{
+    margin-top: 4rem;
+    background-color: var(--blue);
+    border-radius: 30px;
+    height: 450px;
+    overflow: hidden;
+  }
+
+  .testimonial .testimonialList{
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 840px) {
+    .title span:last-of-type{
+      position: relative;
+    }
+
+    .title span:last-of-type svg{
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      z-index: -1;
+    }
+
+    .section .container{
+      width: 900px;
+    }
+
+    .section .testimonial{
+      height: 364px;
+    }
+  }
+</style>

@@ -1,0 +1,4 @@
+.testimonialList{
+  display: flex;
+  flex-direction: column;
+}
