@@ -1,0 +1,98 @@
+.login{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+.login a{
+  display: none;
+}
+
+.login button{
+  background-color: var(--white);
+  color: var(--blue);
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: .4rem 1rem;
+  font-size: .7em;
+  letter-spacing: .1em;
+}
+
+.login button:hover{
+  cursor: pointer;
+}
+
+.login .buttonMenu{
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.login .buttonMenu span{
+  display: block;
+  width: 20px;
+  height: 2px;
+  left: 8px;
+  position: absolute;
+  background-color: var(--blue);
+  transition: all .2s ease-in-out;
+}
+
+.buttonMenu[aria-hidden=true] span:nth-child(1){
+  top: 10px;
+}
+
+.buttonMenu[aria-hidden=true] span:nth-child(2){
+  top: 16px;
+}
+
+.buttonMenu[aria-hidden=true] span:nth-child(3){
+  top: 22px;
+}
+
+.buttonMenu[aria-hidden=false] span:nth-child(1){
+  transform: rotate(45deg);
+}
+
+.buttonMenu[aria-hidden=false] span:nth-child(2){
+  width: 0px;
+}
+
+.buttonMenu[aria-hidden=false] span:nth-child(3){
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 450px) {
+  .login button{
+    font-size: .8em;
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1000px) {
+  .login a{
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: .8em;
+    letter-spacing: .1em;
+    border: 2px solid transparent;
+    padding: .4rem .6rem;
+    border-radius: 10px;
+    transition: border .15s ease-in-out;
+    display: block;
+  }
+  
+  .login a:hover{
+    border: 2px solid var(--white);
+  }
+
+  .login .buttonMenu{
+    display: none;
+  }
+}
