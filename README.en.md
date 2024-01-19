@@ -1,19 +1,18 @@
-[Button Language]: https://img.shields.io/badge/Read%20In%20English-000000?style=for-the-badge
+[Button Language]: https://img.shields.io/badge/Leer%20En%20Español-000000?style=for-the-badge
 
-[![Button Language]](https://github.com/MartinWebDev95/StarkWebClone/blob/master/README.en.md)
+[![Button Language]](https://github.com/MartinWebDev95/StarkWebClone/blob/master/README.md)
 
-# Stark Web Clone                                   
+# Stark Web Clone
 ---
+[Button Stark Web]: https://img.shields.io/badge/Original%20Stark%20Web-3A1FD3?style=for-the-badge
+[Button Stark Web Clone]: https://img.shields.io/badge/Stark%20Web%20Clone-3A1FD3?style=for-the-badge
 
-[Button Stark Web]: https://img.shields.io/badge/Stark%20Web%20Original-3A1FD3?style=for-the-badge
-[Button Stark Web Clone]: https://img.shields.io/badge/Stark%20Web%20Clon-3A1FD3?style=for-the-badge
-
-Este proyecto es un reto de la web [Frontend Practice](https://www.frontendpractice.com/projects/stark) que consiste en crear un clon de la página web de Stark.
+This is a [Frontend Practice web challenge](https://www.frontendpractice.com/projects/stark) that consists of creating a clone of the Stark website.
 
 [![Button Stark Web Clone]](https://stark-web-clone.vercel.app/)
 [![Button Stark Web]](https://www.getstark.co/)
 
-## 👨🏽‍💻 ¿Qué tecnologías he utilizado?
+## 👨🏽‍💻 What technologies have I used?
 ---
 
 [Button Vercel]: https://img.shields.io/badge/Deploy%20on%20Vercel-000000?style=for-the-badge&logo=vercel
@@ -22,17 +21,17 @@ Este proyecto es un reto de la web [Frontend Practice](https://www.frontendpract
 [Button Modules]:https://img.shields.io/badge/CSS%20Modules-000000?style=for-the-badge&logo=css-modules
 
 [![Button Astro]](https://astro.build/)
-[![Button React]](https://es.react.dev/)
+[![Button React]](https://react.dev/)
 [![Button Modules]](https://github.com/css-modules/css-modules?tab=readme-ov-file)
 [![Button Vercel]](https://vercel.com/)
 
-- **Astro:** He utilizado Astro como el framework principal del proyecto, creando la gran mayoría de componentes. Astro es un framework que no carga JavaScript por defecto en el cliente, es SSR (Server Side Rendering), y eso provoca que la carga de la web sea prácticamente instantánea.
+- **Astro:** I have used Astro as the main framework of the project, creating the vast majority of components. Astro is a framework that does not load JavaScript by default on the client, it's SSR (Server Side Rendering), and that causes the loading of the website to be practically instantaneous.
 
-- **React:** He utilizado React para todos los componentes que sean interactivos con el usuario, es decir, todos aquellos componentes que disparen un evento.
+- **React:** I have used React for all components that are interactive with the user, that is, all those components that trigger an event.
 
-- **CSS Modules:** He usado CSS Modules para darle estilos a los componentes de React.
+- **CSS Modules:** I have used CSS Modules to style React components.
 
-## 📸 Algunas capturas del proyecto!
+## 📸 Some Screenshots!
 ---
 
 ![Hero Section Screenshot](https://github.com/MartinWebDev95/StarkWebClone/blob/master/public/assets/screenshots/heroSection.png)
@@ -43,10 +42,10 @@ Este proyecto es un reto de la web [Frontend Practice](https://www.frontendpract
 
 ![Footer Section Screenshot](https://github.com/MartinWebDev95/StarkWebClone/blob/master/public/assets/screenshots/footerSection.png)
 
-## 🗃️ Estructura del proyecto
+## 🗃️ Project Structure
 ---
 
-Esta es la estructura que he utilizado en este proyecto
+This is the structure that I have used in this project
 
 ```text
 /
@@ -72,10 +71,9 @@ Esta es la estructura que he utilizado en este proyecto
 │       └── index.astro
 └── package.json
 ```
-
-## 👀 ¿Dónde puedes encontrarme?
+## 👀 Where you can find me?
 ---
 
-[Button Portfolio]: https://img.shields.io/badge/Visita%20mi%20Portfolio-000000?style=for-the-badge
+[Button Portfolio]: https://img.shields.io/badge/Visit%20My%20Portfolio-000000?style=for-the-badge
 
 [![Button Portfolio]](https://my-portolio-martinwebdev95.vercel.app/)
